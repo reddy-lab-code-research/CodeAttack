@@ -1,0 +1,24 @@
+# victim_model : codet5
+# attack_model: bertattack
+task : translation
+lang: cs_java
+input_lang: cs
+# out_dirname : temp
+# theta: 0.4
+use_imp_words: 1
+# use_ast_constraint : 1
+use_dfg_constraint : 0
+do_lower: 0
+bleu_theta: 1
+batch_size : 256
+use_bpe : 1
+start : 0
+end : 101
+k : 50
+threshold_pred_score : 0.2
+num_label : 0
+use_pred_idx: 1
+input : 'pl'
+output : 'pl'
+output_path: '/home/akshitajha/adversarial_attack/generation/output'
+mlm_path : 'microsoft/codebert-base-mlm'

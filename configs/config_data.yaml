@@ -1,0 +1,198 @@
+translation:
+  java_cs:
+    data_path_x : '/home/akshitajha/adversarial_attack/generation/dataset/code_translation/test.java-cs.txt.java'
+    data_path_y: '/home/akshitajha/adversarial_attack/generation/dataset/code_translation/test.java-cs.txt.cs'
+
+  cs_java:
+    data_path_x: '/home/akshitajha/adversarial_attack/generation/dataset/code_translation/test.java-cs.txt.cs'
+    data_path_y : '/home/akshitajha/adversarial_attack/generation/dataset/code_translation/test.java-cs.txt.java'
+
+refinement:
+  java_small:
+    data_path_x : '/home/akshitajha/adversarial_attack/generation/dataset/code_refinement/small/test.buggy-fixed.buggy'
+    data_path_y: '/home/akshitajha/adversarial_attack/generation/dataset/code_refinement/small/test.buggy-fixed.fixed'
+    
+  java_medium:
+    data_path_x : '/home/akshitajha/adversarial_attack/generation/dataset/code_refinement/medium/test.buggy-fixed.buggy'
+    data_path_y: '/home/akshitajha/adversarial_attack/generation/dataset/code_refinement/medium/test.buggy-fixed.fixed'
+
+summarize:
+  ruby:
+    data_path_x : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/ruby/test.jsonl
+    data_path_y : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/ruby/test.jsonl
+  javascript:
+    data_path_x : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/javascript/test.jsonl
+    data_path_y : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/javascript/test.jsonl
+  go:
+    data_path_x : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/go/test.jsonl
+    data_path_y : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/go/test.jsonl
+  python:
+    data_path_x : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/python/test.jsonl
+    data_path_y : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/python/test.jsonl
+  java:
+    data_path_x : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/java/test.jsonl
+    data_path_y : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/java/test.jsonl
+  php:
+    data_path_x : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/php/test.jsonl
+    data_path_y : /home/akshitajha/adversarial_attack/generation/dataset/code_summarization/code-to-text/php/test.jsonl
+
+codet5:
+  translation:
+    java_cs:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/codet5/finetuned_models_translate_java_cs_codet5_base.bin'
+      max_source_length: 320
+      max_target_length: 256
+      beam_size: 5
+    cs_java:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/codet5/finetuned_models_translate_cs_java_codet5_base.bin'
+      max_source_length: 320
+      max_target_length: 256
+      beam_size: 5
+
+  refinement:
+    java_small:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_refinement/codet5/refine_small_codet5_base.bin'
+      max_source_length: 130
+      max_target_length: 120
+      beam_size: 5
+
+    java_medium:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_refinement/codet5/refine_medium_codet5_base.bin'
+      max_source_length: 240
+      max_target_length: 240
+      beam_size: 5
+
+  summarize:
+    ruby:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/ruby_en_XX/checkpoint_best.pt'
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    javascript:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/javascript_en_XX/checkpoint_best.pt'
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    go:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/go_en_XX/codet5/finetuned_models_summarize_go_codet5_base.bin'
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    python:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/python_en_XX/checkpoint_best.pt'
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    java:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/java_en_XX/codet5/finetuned_models_summarize_java_codet5_base.bin'
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    php:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/php_en_XX/checkpoint_best.pt'
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 5
+
+codebert:
+  translation:
+    java_cs:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/codebert/java_cs/codebert_java_cs.bin
+      max_source_length: 512
+      max_target_length: 512
+      beam_size: 5
+    cs_java:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/codebert/cs_java/codebert_cs_java.bin
+      max_source_length: 512
+      max_target_length: 512
+      beam_size: 5
+
+  refinement:
+    java_small:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_refinement/codebert/java_small/codebert_java_small.bin'
+      max_source_length: 256
+      max_target_length: 256
+      beam_size: 5
+
+    java_medium:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_refinement/codebert/java_med/codebert_java_medium.bin'
+      max_source_length: 256
+      max_target_length: 256
+      beam_size: 5
+
+  summarize:
+    java:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/java_en_XX/codebert/codebert_summarize_java.bin
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    python:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/python_en_XX/codebert/codebert_summarize_python.bin
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    php:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/php_en_XX/codebert/codebert_summarize_php.bin
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+  
+
+graphcodebert:
+  translation:
+    java_cs:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/graphcodebert/java_cs/graphcodebert_java_cs.bin'
+      max_source_length: 320
+      max_target_length: 256
+      beam_size: 10
+      input_lang: java
+    cs_java:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/graphcodebert/cs_java/graphcodebert_cs_java.bin'
+      max_source_length: 320
+      max_target_length: 256
+      beam_size: 10
+      input_lang: c_sharp
+
+  refinement:
+    java_small:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_refinement/graphcodebert/java_small/graphcodebert_java_small.bin'
+      max_source_length: 256
+      max_target_length: 256
+      beam_size: 5
+      input_lang: java
+    java_medium:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_refinement/graphcodebert/java_medium/graphcodebert_java_medium.bin'
+      max_source_length: 256
+      max_target_length: 256
+      beam_size: 5
+      input_lang: java
+
+plbart:
+  translation:
+    java_cs:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/plbart/plbart_java_cs.pt'
+      max_source_length: 400
+      max_target_length: 400
+    cs_java:
+      victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_translation/plbart/plbart_cs_java.pt'
+      max_source_length: 400
+      max_target_length: 400
+
+
+roberta:
+  summarize:
+    java:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/java_en_XX/roberta/roberta_summarize_java.bin
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    python:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/python_en_XX/roberta/roberta_summarize_python.bin
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10
+    php:
+      victim_model_ckpt: /home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/php_en_XX/roberta/roberta_summarize_php.bin
+      max_source_length: 256
+      max_target_length: 128
+      beam_size: 10

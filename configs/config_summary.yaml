@@ -1,0 +1,23 @@
+task : 'summarization'
+victim_model : 'codet5'
+input : 'pl'
+output : 'nl'
+lang: 'java_en_no_attack'
+data_path : '/home/akshitajha/adversarial_attack/generation/dataset/code_summarization/codet5/java/test.jsonl'
+victim_model_ckpt: '/home/akshitajha/adversarial_attack/generation/checkpoints/code_summarization/java_en_XX/codet5/finetuned_models_summarize_java_codet5_base.bin'
+max_source_length: 256
+max_target_length: 128
+output_path: '/home/akshitajha/adversarial_attack/generation/output'
+mlm_path : 'microsoft/codebert-base-mlm'
+output_dir : ''
+start : 0
+end : 10000
+k : 50
+threshold_pred_score : 0.3
+batch_size : 256
+num_label : 0
+use_bpe : 1
+use_ast_constraint : 1
+use_dfg_constraint : 0
+use_pred_idx: 1
+bleu_theta: 100
