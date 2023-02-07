@@ -32,7 +32,7 @@ Code for this repository has been adapted from [CodeXGLUE](https://github.com/mi
 ## Citation
 
 ```
-@article{jha2022codeattack,
+@article{jha2023codeattack,
   title={Codeattack: Code-based adversarial attacks for pre-trained programming language models},
   author={Jha, Akshita and Reddy, Chandan K},
   journal={Proceedings of the AAAI Conference on Artificial Intelligence},
