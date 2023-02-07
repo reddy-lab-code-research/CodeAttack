@@ -9,7 +9,7 @@ Pre-trained programming language (PL) models (such as CodeT5, CodeBERT, GraphCod
 
 ## Run
 
-To install the dependencies please execute the command ```pip install -r requirements.txt```. To run the code, please execute ```python codeattack.py [args]``` with the follwing arguments:
+To install the dependencies please execute the command ```pip install -r requirements.txt```. To run the code, please execute ```python codeattack.py ``` with the following arguments:
 
 |Argument |Description|
 |--- |--- |
