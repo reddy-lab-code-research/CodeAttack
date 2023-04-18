@@ -1,4 +1,4 @@
-name: textattackenv
+name: codeattack
 channels:
   - conda-forge
   - anaconda
